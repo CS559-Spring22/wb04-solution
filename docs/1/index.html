@@ -61,7 +61,9 @@
         
         
         
-		<div class="content post__content clearfix"><p>When working with Canvas, we write lots of code that refers to the positions of points using things such as <code>context.moveTo(x,y),</code> <code>context.lineTo(x,y)</code> or <code>context.fillRect(x,y,w,h)</code>. In these cases, we pass points as a pair of numbers (<code>x,y</code>).</p>
+		<div class="content post__content clearfix"><div class="dimbox">
+                    <h3>CS559 Spring 2022 Sample Solution</h3>
+                </div><p>When working with Canvas, we write lots of code that refers to the positions of points using things such as <code>context.moveTo(x,y),</code> <code>context.lineTo(x,y)</code> or <code>context.fillRect(x,y,w,h)</code>. In these cases, we pass points as a pair of numbers (<code>x,y</code>).</p>
 <p>When thinking about points, it is easier notation to write points directly. So we can use a variable <strong>p</strong> to refer to a point. In terms of implementation, we might represent <strong>p</strong> as an array (of length 2 for 2D), or as an object with members for x and y. Some APIs we will see later in the class will define their functions to take point objects, rather than a list of individual parameters.</p>
 <p>Points and vectors are not the same (see <a href="https://pages.graphics.cs.wisc.edu/559-sp22/tutorials/points-vectors/" target="_blank">CS559 Tutorial: Points, Vectors, Coordinate Systems</a>) if you need a reminder). However, in code (and notation), we often do not distinguish between them. In terms of representation, they store the same things (e.g., two numbers for a 2D point or a 2D vector).</p>
 <p>Generally, we write vectors or points as lowercase boldface (in print). We will try to be consistent with that. So, x is a scalar (number), <strong>x</strong> is a vector, and <code>$x_x$</code> is the x component of the <strong>x</strong> vector (which is a scalar). It might be more correct to write <code>$ \mathbf{x}_x $</code> since <strong>x</strong> is a vector.</p>

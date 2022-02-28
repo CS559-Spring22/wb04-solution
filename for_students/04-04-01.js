@@ -1,4 +1,9 @@
 /**
+ * CS559 Spring 2021 Example Solution
+ * Written by CS559 course staff
+ */
+
+/**
  * 04-04-01.js - a simple JavaScript file that gets loaded with
  * page 4 of Workbook 4 (CS559).
  *
@@ -26,8 +31,15 @@ import * as utilities from "./04-04-utilities.js";
  * @param {number} y2
  */
 function twoDots(context, x1, y1, x2, y2) {
+    // Begin Example Solution
     context.translate(x1, y1);
-    context.scale(5, 5);
+    /** @type {number} */ const dx = x2 - x1;
+    /** @type {number} */ const dy = y2 - y1;
+    /** @type {number} */ const scale = Math.sqrt(dx * dx + dy * dy) / 10.0; // CS559 Example Code
+    context.scale(scale, scale);
+    /** @type {number} */ const angle = Math.atan2(dy, dx); // CS559 Example Code
+    context.rotate(angle);
+    // End Example Solution
 }
 
 utilities.setup("canvas1", twoDots, "black");

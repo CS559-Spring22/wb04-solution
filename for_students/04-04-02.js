@@ -1,4 +1,9 @@
 /**
+ * CS559 Spring 2021 Example Solution
+ * Written by CS559 course staff
+ */
+
+/**
  * 04-04-02.js - a simple JavaScript file that gets loaded with
  * page 4 of Workbook 4 (CS559).
  *
@@ -27,12 +32,26 @@ import * as utilities from "./04-04-utilities.js";
  * @param {number} y2
  */
 function twoDots(context, x1, y1, x2, y2) {
-    let a = 5;
-    let b = 0;
-    let c = 0;
-    let d = 5;
-    let e = x2;
-    let f = y2;
+    // Begin Example Solution
+    /** @type {number} */ const dx = x2 - x1;
+    /** @type {number} */ const dy = y2 - y1;
+    // Using matrix multiplication (not recommended)
+    /** @type {number} */ const scale = Math.sqrt(dx * dx + dy * dy) / 10.0;  // CS559 Example Code
+    /** @type {number} */ const angle = Math.atan2(dy, dx);  // CS559 Example Code
+    /** @type {number} */ let a = scale * Math.cos(angle);
+    /** @type {number} */ let b = scale * Math.sin(angle);
+    /** @type {number} */ let c = -scale * Math.sin(angle);
+    /** @type {number} */ let d = scale * Math.cos(angle);
+    /** @type {number} */ let e = x1;
+    /** @type {number} */ let f = y1;
+    // Without using matrix multiplication
+    a = dx / 10;
+    b = dy / 10;
+    c = -dy / 10;
+    d = dx / 10;
+    e = x1;
+    f = y1;
+    // End Example Solution
     // please leave this line - you should CHANGE the 6 lines above
     context.transform(a, b, c, d, e, f);
 }

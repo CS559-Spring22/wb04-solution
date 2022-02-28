@@ -1,4 +1,9 @@
 /**
+ * CS559 Spring 2021 Example Solution
+ * Written by CS559 course staff
+ */
+
+/**
  * 04-04-05.js - a simple JavaScript file that gets loaded with
  * page 4 of Workbook 4 (CS559).
  *
@@ -20,7 +25,9 @@ import * as utilities from "./04-04-utilities.js";
  * @param {number} s
  */
 function shearX(context, s) {
-
+    // Begin Example Solution
+    context.transform(1, 0, s, 1, 0, 0); // CS559 Example Code
+    // End Example Solution
 }
 
 // students don't need to change this

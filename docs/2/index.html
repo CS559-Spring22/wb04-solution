@@ -61,7 +61,9 @@
         
         
         
-		<div class="content post__content clearfix"><p>On this page, we&rsquo;ll finally get to doing things in terms of vector / linear algebra.</p>
+		<div class="content post__content clearfix"><div class="dimbox">
+                    <h3>CS559 Spring 2022 Sample Solution</h3>
+                </div><p>On this page, we&rsquo;ll finally get to doing things in terms of vector / linear algebra.</p>
 <p>Again, this is more of a review than a workbook. Read it to have the notation that we can use going forward.</p>
 <p>This page assumes you&rsquo;re comfortable with the following linear algebra concepts:</p>
 <ul>
@@ -169,7 +171,7 @@ If you multiply this out, you&rsquo;ll see that <code>$ x'_w $</code> will alway
 ></iframe>
 
 <h2 id="projective-coordinates">Projective Coordinates</h2>
-<p>Homogeneous coordinates are sometimes called projective because we need to project points from the higher dimensional space back to our original space. This will be useful when we get to 3D since it will let us do perspective transformation (which involve a projection).</p>
+<p>Homogeneous coordinates are sometimes called projective because we need to project points from the higher dimensional space back to our original space. This will be useful when we get to 3D since it will let us do perspective transformation (which involves a projection).</p>
 <p>If the bottom row of the projective transformation (the one we apply to homogeneous coordinates) is zero except for a 1 in the lower right corner, the transformation is affine in the original space. If the point we transform starts out with a 1 for its w coordinate, it will end up with a 1 for its w coordinate.</p>
 <p>However, if the bottom row of the matrix is not 0,0,1, or the w of the point is not 1, we will end up with a number other than 1 for the new w, and we need to remember to &ldquo;divide by w&rdquo; to convert back to 2D when the time comes.</p>
 <p>To illustrate how this can work, consider the scaling transformation. We can write it two different ways:
